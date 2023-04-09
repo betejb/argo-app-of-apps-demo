@@ -5,7 +5,7 @@ resources:
 
 patchesStrategicMerge:
   - application-k8s-dashboard.yaml
-  - kubernetes-metrics-server.yaml
+  - application-kubernetes-metrics-server.yaml
 
 generatorOptions:
   disableNameSuffixHash: true
