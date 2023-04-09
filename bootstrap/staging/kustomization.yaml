@@ -3,5 +3,9 @@ kind: Kustomization
 resources:
   - ../base
 
+patchesStrategicMerge:
+  - application-k8s-dashboard.yaml
+  - kubernetes-metrics-server.yaml
+
 generatorOptions:
   disableNameSuffixHash: true

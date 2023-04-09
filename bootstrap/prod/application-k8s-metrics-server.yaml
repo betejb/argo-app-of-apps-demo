@@ -6,9 +6,9 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "-8"
 spec:
+  project: infra-gitops
   source:
     repoURL: https://github.com/betejb/argo-app-of-apps-demo
     targetRevision: setting-up
-    path: apps/kubernetes-dashboard/prod
-
+    path: apps/kubernetes-metrics-server/prod
 

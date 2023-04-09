@@ -6,18 +6,9 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "-8"
 spec:
-  project: infra-gitops
   source:
     repoURL: https://github.com/betejb/argo-app-of-apps-demo
     targetRevision: setting-up
-    path: "dummy-path"
-  destination:
-    server: "https://kubernetes.default.svc"
-    namespace: kubernetes-dashboard
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
-      - ApplyOutOfSyncOnly=true
+    path: apps/kubernetes-dashboard/staging
+
+
