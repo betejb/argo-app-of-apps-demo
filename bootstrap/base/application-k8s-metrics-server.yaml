@@ -13,7 +13,7 @@ spec:
     path: "dummy-path"
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: kube-system
+    namespace: kubernetes-dashboard
   syncPolicy:
     automated:
       prune: true
