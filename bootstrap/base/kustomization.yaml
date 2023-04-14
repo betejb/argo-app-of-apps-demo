@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - application-k8s-dashboard.yaml
   - application-k8s-metrics-server.yaml
+  - application-traefik.yaml
 
 generatorOptions:
   disableNameSuffixHash: true
