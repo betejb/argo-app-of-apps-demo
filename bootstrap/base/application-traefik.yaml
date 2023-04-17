@@ -16,6 +16,11 @@ spec:
       values: |
         providers:          
           kubernetesIngress: {}
+        logs:
+          general:
+            level: INFO
+          access:
+            enabled: true
       #     ports:
       #       traefik:
       #         expose: true
