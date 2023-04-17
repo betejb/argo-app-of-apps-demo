@@ -14,6 +14,8 @@ spec:
     helm:
       releaseName: traefik
       values: |
+        service:
+          type: NodePort
         providers:          
           kubernetesIngress: {}
         logs:
@@ -21,14 +23,14 @@ spec:
             level: INFO
           access:
             enabled: true
-      #     ports:
-      #       traefik:
-      #         expose: true
-      #         nodePort: 32090
-      #       web:
-      #         nodePort: 32080
-      #       websecure:
-      #         nodePort: 32443
+        ports:
+          traefik:
+            expose: true
+            nodePort: 32090
+          web:
+            nodePort: 32080
+          websecure:
+            nodePort: 32443
   destination:
     server: "https://kubernetes.default.svc"
     namespace: traefik-system
