@@ -8,10 +8,10 @@ spec:
     - host: example.dev
       http:
         paths:
-          - path: /dash
+          - path: /
             pathType: Exact
             backend:
               service:
-                name:  dashboard-metrics-scraper
+                name:  kubernetes-dashboard
                 port:  
-                  number: 8000
+                  number: 443
