@@ -8,7 +8,7 @@ spec:
     - host: example.dev
       http:
         paths:
-          - path: /
+          - path: /dash
             pathType: Exact
             backend:
               service:
