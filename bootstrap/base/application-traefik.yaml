@@ -13,8 +13,22 @@ spec:
     targetRevision: 22.1.0
     helm:
       releaseName: traefik
-      values: |
-        ##
+      # values: |
+      #   providers:
+      #     kubernetesCRD:
+      #       namespaces:
+      #       - default
+      #       - traefik
+      #     providers:
+      #       kubernetesIngress: {}
+      #     ports:
+      #       traefik:
+      #         expose: true
+      #         nodePort: 32090
+      #       web:
+      #         nodePort: 32080
+      #       websecure:
+      #         nodePort: 32443
   destination:
     server: "https://kubernetes.default.svc"
     namespace: traefik-system

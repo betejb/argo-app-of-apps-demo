@@ -3,5 +3,8 @@ kind: Kustomization
 resources:
   - ../base
 
+patchesStrategicMerge:
+  - kubernetes-dashboard.yaml
+  
 generatorOptions:
   disableNameSuffixHash: true
