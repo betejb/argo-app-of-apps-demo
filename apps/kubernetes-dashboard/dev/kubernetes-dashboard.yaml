@@ -5,8 +5,7 @@ metadata:
   namespace: kubernetes-dashboard
 spec:
   rules:
-    - host: example.dev
-      http:
+    - http:
         paths:
           - path: /
             pathType: Exact
