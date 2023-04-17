@@ -12,6 +12,6 @@ spec:
             pathType: Exact
             backend:
               service:
-                name:  kubernetes-dashboard
+                name:  dashboard-metrics-scraper
                 port:  
-                  number: 443
+                  number: 8000
