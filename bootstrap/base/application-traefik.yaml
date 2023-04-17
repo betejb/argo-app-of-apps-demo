@@ -13,14 +13,10 @@ spec:
     targetRevision: 22.1.0
     helm:
       releaseName: traefik
-      # values: |
-      #   providers:
-      #     kubernetesCRD:
-      #       namespaces:
-      #       - default
-      #       - traefik
-      #     providers:
-      #       kubernetesIngress: {}
+      values: |
+        providers:
+          kubernetesCRD: {}
+          kubernetesIngress: {}
       #     ports:
       #       traefik:
       #         expose: true
