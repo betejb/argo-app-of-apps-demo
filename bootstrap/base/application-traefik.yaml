@@ -14,8 +14,7 @@ spec:
     helm:
       releaseName: traefik
       values: |
-        providers:
-          kubernetesCRD: {}
+        providers:          
           kubernetesIngress: {}
       #     ports:
       #       traefik:
