@@ -10,7 +10,7 @@ spec:
   source: 
     chart: kubeshark 
     repoURL: https://helm.kubeshark.co
-    targetRevision: 39.6
+    targetRevision: "39.6"
     helm:
       releaseName: kubeshark 
       values: |
