@@ -4,7 +4,7 @@ resources:
   - ../base
 
 patchesStrategicMerge:
-  - kubernetes-dashboard.yaml
+  #- kubernetes-dashboard.yaml
   
 generatorOptions:
   disableNameSuffixHash: true
