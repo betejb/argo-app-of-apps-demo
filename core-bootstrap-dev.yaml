@@ -28,7 +28,7 @@ spec:
   source:
     path:  bootstrap/dev/
     repoURL: https://github.com/betejb/argo-app-of-apps-demo
-    targetRevision: setting-up
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
