@@ -4,7 +4,6 @@ resources:
   - application-k8s-dashboard.yaml
   - application-k8s-metrics-server.yaml
   - application-kubeshark.yaml
-  #- application-traefik.yaml
 
 generatorOptions:
   disableNameSuffixHash: true
