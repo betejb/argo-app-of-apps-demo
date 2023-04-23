@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: k8s-dashboard
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "-8"
+spec:
+  source:
+    repoURL: https://github.com/betejb/argo-app-of-apps-demo
+    targetRevision: setting-up
+    path: apps/kubernetes-dashboard/staging
+
+

@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kubeshark 
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  project: infra-gitops
+  source: 
+    chart: kubeshark 
+    repoURL: https://helm.kubeshark.co
+    targetRevision: "39.6"
+    helm:
+      releaseName: kubeshark 
+      values: |
+        # service:
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: kubeshark
+  
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true

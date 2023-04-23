@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: k8s-metrics-server
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "-8"
+spec:
+  project: infra-gitops
+  source:
+    repoURL: https://github.com/betejb/argo-app-of-apps-demo
+    targetRevision: setting-up
+    path: apps/kubernetes-metrics-server/dev
+
