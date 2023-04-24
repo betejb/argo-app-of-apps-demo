@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-java
+  labels:
+    app: demo-java
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-java
+  template:    
+    metadata:
+      labels:
+        app: demo-java
+    spec:
+      containers:
+      - name: demo-java-container
+        image: registry.gitlab.com/betejb/springboot-demo/springboot-demo:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        command:
+          - /bin/sh
+          - -c
+          - java -jar app.jar
+      imagePullSecrets: 
+      - name: regcred

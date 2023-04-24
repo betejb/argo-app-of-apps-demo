@@ -4,8 +4,7 @@ resources:
   - ../base
 
 patchesStrategicMerge:
-  - application-k8s-dashboard.yaml
-  - application-k8s-metrics-server.yaml
+  - appset-deployments-manifests.yaml
 
 generatorOptions:
   disableNameSuffixHash: true

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service 
+metadata:
+  name: demo-java-service-nlb
+   # To create Network Load Balancer  
+spec:
+  type: ClusterIp, # NodePort
+  selector:
+    app: demo-java
+  ports: 
+    - name: http
+      port: 80 # Service Port
+      targetPort: 8080 # Container Port

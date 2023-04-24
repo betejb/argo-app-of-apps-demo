@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: manifest-applications
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - appName: kubernetes-dashboard
+        namespace: kube-system
+      - appName: kubernetes-metrics-server
+        namespace: kube-system
+  template:
+    metadata:
+      name: "{{appName}}"
+    spec:
+      project: infra-gitops
+      source:
+        repoURL: https://github.com/betejb/argo-app-of-apps-demo
+        targetRevision: appsets
+        path: ""
+      destination:
+        name: in-cluster
+        namespace: "{{namespace}}"
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
+          - ApplyOutOfSyncOnly=true

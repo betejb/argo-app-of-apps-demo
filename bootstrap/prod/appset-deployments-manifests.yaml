@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: manifest-applications
+  namespace: argocd
+spec:
+  template:
+    spec:
+      project: infra-gitops
+      source:
+        repoURL: https://github.com/betejb/argo-app-of-apps-demo
+        targetRevision: appsets
+        path: "apps/{{appName}}/prod"
+
