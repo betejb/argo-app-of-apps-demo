@@ -18,7 +18,7 @@ spec:
       project: infra-gitops
       source:
         repoURL: https://github.com/betejb/argo-app-of-apps-demo
-        targetRevision: appsets
+        targetRevision: appset-demo
         path: ""
       destination:
         name: in-cluster

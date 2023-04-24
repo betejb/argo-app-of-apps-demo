@@ -7,7 +7,7 @@ spec:
   generators:
   - git:
       repoURL: https://github.com/betejb/argo-app-of-apps-demo
-      revision: appsets-demo
+      revision: appset-demo
       directories:
       - path: monorepo-demo/env/*
   template:
@@ -17,7 +17,7 @@ spec:
       project: infra-gitops
       source:
         repoURL: https://github.com/betejb/argo-app-of-apps-demo
-        targetRevision: appsets
+        targetRevision: appset-demo
         path: '{{path}}'
       destination:
         name: in-cluster
