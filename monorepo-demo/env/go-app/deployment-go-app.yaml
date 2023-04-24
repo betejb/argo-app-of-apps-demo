@@ -16,7 +16,7 @@ spec:
       containers:
       - name: go-app
         image: registry.gitlab.com/betejb/springboot-demo/go-app:v1
-        imagePullPolicy: "Always"
+        imagePullPolicy: "IfNotPresent"
         ports:
         - containerPort: 8080
           name: http-port

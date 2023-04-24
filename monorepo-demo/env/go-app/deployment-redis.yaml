@@ -16,7 +16,7 @@ spec:
       containers:
       - name: redis-go
         image: docker.io/library/redis:alpine
-        imagePullPolicy: "Always"
+        imagePullPolicy: "IfNotPresent"
         ports:
         - containerPort: 6379
           name: redis
